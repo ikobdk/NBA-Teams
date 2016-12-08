@@ -1,5 +1,5 @@
 // Update with your config settings.
-
+require("dotenv").config()
 module.exports = {
 
   development: {
@@ -8,7 +8,7 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: 'postgres://localhost/nba_teams'
+    connection: process.env.DATABASE_URL +"?ssl=true"
   },
 
 
